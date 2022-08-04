@@ -1,0 +1,25 @@
+{
+    "name": "getjohn/module-magento-module-customer-override",
+    "description": "Allow Special Characters in Customer Name in Magento 2.4",
+    "type": "magento2-module",
+    "license": "MIT",
+	"version": "1.0.0",
+    "authors": [
+        {
+            "name": "Noeli",
+            "email": "noeli@getjohn.co.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "magento/module-customer": ">=103.0.2"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "GetJohn\\MagentoCustomerOverride\\": ""
+        }
+    }
+}
