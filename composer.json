@@ -3,7 +3,7 @@
     "description": "Allow Special Characters in Customer Name in Magento 2.4",
     "type": "magento2-module",
     "license": "MIT",
-	"version": "1.0.0",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "Noeli",

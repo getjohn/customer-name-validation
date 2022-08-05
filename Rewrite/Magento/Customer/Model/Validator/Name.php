@@ -14,7 +14,7 @@ use Magento\Customer\Model\Customer;
  */
 class Name extends \Magento\Customer\Model\Validator\Name
 {
-    private const PATTERN_NAME = '/(?:[\p{L}\p{M}\,\-\_\.\'\s\d\(\)\/]){1,255}+/u';
+    private const PATTERN_NAME = '/(?:[\p{L}\p{M}\,\-\_\.\'\s\d\(\)\/\（\）]){1,255}+/u';
 
     /**
      * Validate name fields.
