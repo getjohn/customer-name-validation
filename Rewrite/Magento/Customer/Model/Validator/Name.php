@@ -22,21 +22,21 @@ class Name extends \Magento\Customer\Model\Validator\Name
      * @param Customer $customer
      * @return bool
      */
-    public function isValid($customer)
+    public function isValid($customer): bool
     {
         if (!$this->isValidName($customer->getFirstname())) {
-            parent::_addMessages([['firstname' => 'First Name is not valid!']]);
+            $this->_addMessages([['firstname' => 'First Name is not valid!']]);
         }
 
         if (!$this->isValidName($customer->getLastname())) {
-            parent::_addMessages([['lastname' => 'Last Name is not valid!']]);
+            $this->_addMessages([['lastname' => 'Last Name is not valid!']]);
         }
 
         if (!$this->isValidName($customer->getMiddlename())) {
-            parent::_addMessages([['middlename' => 'Middle Name is not valid!']]);
+            $this->_addMessages([['middlename' => 'Middle Name is not valid!']]);
         }
 
-        return count($this->_messages) == 0;
+        return count($this->_messages) === 0;
     }
 
     /**
@@ -45,11 +45,11 @@ class Name extends \Magento\Customer\Model\Validator\Name
      * @param string|null $nameValue
      * @return bool
      */
-    private function isValidName($nameValue)
+    private function isValidName(?string $nameValue): bool
     {
-        if ($nameValue != null) {
+        if ($nameValue !== null) {
             if (preg_match(self::PATTERN_NAME, $nameValue, $matches)) {
-                return $matches[0] == $nameValue;
+                return $matches[0] === $nameValue;
             }
         }
 
